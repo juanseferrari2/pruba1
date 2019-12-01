@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    .inicio{
+        width: 0%;
+    }
+    .final{
+        width: 50%;
+    } 
+    .animacion{
+        transition: all 2s ease .5s; 
+    }
+    .menu-iconos{
+        width: 45px;
+    }
+    .navbar{
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: #5e4485;
+        padding: 1% 0;
+        font-size: 1.2em;
+        padding: 1% 0;
+        font-size: 1.2em;
+        border: 0;
+    }
+   .navbar-brand{
+        float: left;
+        min-height: 30px;
+        padding: 0 15px 15px;
+    }
+    .navbar-collapse .navbar-nav .active a, .navbar-collapse .navbar-nav .active a:focus, .navbar-collapse .navbar-nav .active a:hover{
+        color: #ffffff;
+        background-color: #5e4485;
+
+    }
+
+    
+
+    </style>
+
+  </head>
+  <body>
+    <script src="script.js"></script>
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+            <a class="navbar-brand" href="#"><img src="bcp logo.png" width="80" height="40"></a>
+            <a class="navbar-brand" href="#">OLSHI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav navbar-right">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                        </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+
+            </div>
+        </nav>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="oracle1.jpg" alt="" class="d-block w-100">
+                </div>
+                <div class="carousel-caption">
+                    <h1>get to know bootstrap</h1>
+                    <br>
+                    <button type="button" class="btn btn-danger">Get Started</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="oracle2.jpg" alt="" class="d-block w-100">
+                </div>
+
+            </div>
+
+
+        </div> <!-- End Slider-->
+
+
+
+      <div class="container text-center py-5"> 
+          <h1 id="titulo" class="display-3 py-5">Array</h1>
+          <div class="py-4">
+              <div class="progress">
+                  <div id="barra" class="progress-bar progress-bar-striped inicio animacion" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+          </div>
+          <button id="boton" class="btn btn-danger">Haz click y ve mi poder</button>
+      </div>
+
+
+      <div class="container py-2">
+          <p class="lead">Ingrese usuarios</p>
+          <form>
+          <input id="nombre" type="text" placeholder="Ingresa nombre" class="form-control my-2">
+          <input id="edad" type="text" placeholder="Ingresa edad" class="form-control my-2">
+          <button id="boton2" class="btn btn-success" type="reset" onclick="capturar();">Agregar</button>
+          </form>  
+      </div>
+      <div class="container">
+          <table class="table " id="tabla">
+              <thead class="thead-inverse">
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Edad</th>
+                  </tr>
+              </thead>
+          
+          </table>
+      </div>
+        
+    <script> //formulario para agregar datos en una tabla con un click
+        function capturar(){
+            function Persona(nombre,edad){
+                this.nombre=nombre
+                this.edad=edad
+            }
+            var nombreCapturar = document.getElementById("nombre").value;
+            //console.log(nombreCapturar)
+            var edadCapturar = document.getElementById("edad").value;
+            //console.log(edadCapturar);
+
+
+            //aca iba un var antes pero lo sacamos para que sea una variable global(aparece en todo lados)
+            nuevoSujeto = new Persona(nombreCapturar,edadCapturar);
+            console.log(nuevoSujeto)
+            agregar();
+        }   
+        var baseDatos= []
+        function agregar(){
+            baseDatos.push(nuevoSujeto);
+            console.log(baseDatos)
+            document.getElementById("tabla").innerHTML += '<tbody><td>'+nuevoSujeto.nombre+'</td><td>'+nuevoSujeto.edad+'</td></tbody>';
+        };
+    
+    </script>
+
+
+
+
+    <!-- <script> //cambia el titulo con un innerHTML
+        var nombre = "Juanse";
+        var Apellido = "Ferrari";
+    document.getElementById("titulo").innerHTML = nombre + " " + Apellido;
+    </script> -->
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="display-4 text-center">Weight Converter</h1>
+            <form>
+                <div class="form-group">
+                    <input type="number" class="form-control form-control-lg" placeholder="Enter Pounds" id="lbsInput">
+
+                </div>
+            </form>
+            <div id="output">
+                <div class="card bg-primary mb-3">
+                    <div class="card-body">
+                        <h4>Grams: </h4>
+                        <div id="gramsOutput"></div>
+                    </div>
+                </div>
+
+                <div class="card bg-success mb-3">
+                        <div class="card-body">
+                            <h4 class="class-title">Kilograms: </h4>
+                            <div id="kgOutput"></div>
+                        </div>
+                </div>   
+                
+                <div class="card bg-danger mb-3">
+                        <div class="card-body">
+                            <h4>Ounces: </h4>
+                            <div id="ocOutput"></div>
+                        </div>
+                </div>               
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+     
+<script>
+    document.getElementById('output').style.visibility = 'hidden';
+    document.getElementById('lbsInput').addEventListener('input',function(e){
+        document.getElementById('output').style.visibility = 'visible';
+        let lbs = e.target.value;
+        console.log(lbs);
+        document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+        document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+        document.getElementById('ocOutput').innerHTML = lbs*16;
+    })
+</script>
+
+
+
+
+
+
+    <!-- <script>// variable con numeros
+        var x = 11;
+        if(x<12){
+            alert("buenos dias");
+        }
+    
+    
+    </script> -->
+
+    <div class="mt-5 menu-iconos">
+        <div class="bg-warning"><i class="fa fa-share-alt" aria-hidden="true"></i> </div>
+    </div>
+
+    <script>
+        //var perro = {nombre:"rex", edad:5, vivo:true};
+        var perro = {nombre:"tomy", edad:4, vivo:false}
+        //console.log(perro.nombre);
+        //empezar con Mayuscula cuando estamos haciendo objetos
+        function Perro(nombre,edad,vivo){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.vivo = vivo;
+        };
+        var perro1 = new Perro("rafarulo",6,true);
+        console.log(perro1);
+        
+        //Array de objetos (lista de datos)
+        var animal = [perro,perro1];
+        console.log(animal);
+
+        //un array con muchos objetos
+        var gatos = [
+            {
+                nombre: "felipe",
+                edad: 9,
+                vivo: false,                
+            },
+            {
+                nombre:"juanse",
+                edad: 1,
+                vivo: true,
+            }
+        ]
+        console.log(gatos)
+
+          
+
+    
+    </script>
+
+
+
+    <!-- <script> //queryselectorall estamos accediendo a todos los parrafos del documento HTML
+        var parrafos = document.querySelectorAll("p")
+        console.log(parrafos)
+        for(let cambio of parrafos){
+            cambio.classList.add("text-danger")
+        }        
+   
+    </script> -->
+
+
+
+   <script> //al hacer click se anima la barra
+        function animar(){
+             document.getElementById("barra").classList.toggle("final")
+
+         }
+         document.getElementById("boton").onclick = function(){
+             animar();
+         }
+
+    </script>   
+
+    <!-- <script> // los array empiezan en nro 0(español)
+        var lenguajes = ["español", "ingles","portugues"];
+        lenguajes.push("frances"); //aparece al final del array(4)
+        lenguajes.unshift("aleman"); //aparece al principio (0)
+        document.getElementById("titulo").innerHTML = lenguajes.length;
+        console.log(lenguajes);
+    
+    </script> -->
+
+
+
+    <!-- <script> //Cambia el display del titulo
+        document.getElementById("titulo2").classList.add("bg-danger");
+        document.getElementById("titulo2").classList.remove("display-4");
+    
+    </script> -->
+    <!-- <script> //cambia el titulo con funciones
+        function suma(numero1, numero2){
+            return numero1 + numero2;
+            
+        }
+        var x = 6;
+        var y = 1;
+
+
+        document.getElementById("titulo").innerHTML = suma(x,y)
+
+    </script> -->
+
+    <!-- <script> //Cambia el titulo al hacer click
+        function cambiar(){
+            document.getElementById("titulo").innerHTML = "Ajá te cambie";
+        }
+        document.getElementById("boton").onclick = function(){
+            cambiar();
+        }
+
+    </script> -->
+   
+    <div class="container text-center py-5"> 
+         <button id="btnjson" class="btn btn-primary">GetJSON</button>
+        <div class="row" id="cardDiv"></div>
+    </div>
+    <script>
+    var btn= document.getElementById('btnjson').addEventListener('click',getPost);
+    var con=0
+    var div= document.getElementById('cardDiv');
+
+    </script>
+    
+    <div class="container text-center py-5"> 
+            <button id="btnstores" class="btn btn-primary">GetStores</button>
+            <div class="row" id="cardDiv2"></div>
+
+     </div>
+    <script>
+    var btn2= document.getElementById('btnstores').addEventListener('click',stores);
+    var con=0
+    var div2= document.getElementById('cardDiv2');
+
+    
+    </script>
+
+
+
+
+    <!-- <script>alert("hola soy un mensaje externo")</script>    -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
