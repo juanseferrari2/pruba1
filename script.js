@@ -9,7 +9,7 @@ function getPost(){
     .then((post)=>{
         for (let index=0;index<1; index++){
             div.innerHTML+=`
-            <div class="card col-3 m-1 mx-auto" style="width: 18rem;">
+            <div class="card col-3 m-1 mx-auto shadow rounded" style="width: 18rem;">
             <img src="${post[con].thumbnailUrl}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">${post[con].id}</h5>
@@ -38,7 +38,7 @@ function stores(){
     .then((post)=>{
         for (let index=0;index<data2.length; index++){
         div2.innerHTML+=`
-        <div class="card col-3 m-1 mx-auto" style="width: 18rem;">
+        <div class="card w-75 mb-3 mx-auto shadow rounded" style="width: 18rem;">
         <img src="https://infonegocios.info/uploads/grido-helados-logo-fake-news-interna-cba.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${data2[index].id}</h5>

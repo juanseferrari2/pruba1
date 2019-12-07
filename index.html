@@ -37,8 +37,12 @@
     }
     .navbar-collapse .navbar-nav .active a, .navbar-collapse .navbar-nav .active a:focus, .navbar-collapse .navbar-nav .active a:hover{
         color: #ffffff;
-        background-color: #5e4485;
+        background-color: #f5f6f8;
 
+    }
+    .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 250px;
     }
 
     
@@ -47,10 +51,11 @@
 
   </head>
   <body>
+   
     <script src="script.js"></script>
       <nav class="navbar navbar-expand-lg navbar-dark ">
-            <a class="navbar-brand" href="#"><img src="bcp logo.png" width="80" height="40"></a>
-            <a class="navbar-brand" href="#">OLSHI</a>
+            <a class="navbar-brand" href="#"><img src="logo1.png" width="80" height="60"></a>
+            <a class="navbar-brand" href="#">AHOY</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,16 +63,15 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav navbar-right">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="features.html">Features</a>
                 <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Dropdown
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="login.html">Login</a>
                                   <a class="dropdown-item" href="#">Another action</a>
                                   <div class="dropdown-divider"></div>
                                   <a class="dropdown-item" href="#">Something else here</a>
@@ -360,7 +364,7 @@
     </script>
     
     <div class="container text-center py-5"> 
-            <button id="btnstores" class="btn btn-primary">GetStores</button>
+            <button id="btnstores" class="btn btn-primary shadow rounded">GetStores</button>
             <div class="row" id="cardDiv2"></div>
 
      </div>
